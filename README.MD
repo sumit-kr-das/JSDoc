@@ -28,7 +28,7 @@ The execution context is created into two parts:
 ### Memory Creation Phase:
 In the first Phase the JavaScript engine comes through the whole program
 line by line(single-threaded) & it allocates memory to all the variables & functions.
-In the case of variables allocates a special value(placeholder) `undefined`.
+In the case of variable allocates a special value(placeholder) `undefined`.
 
 ### Code Execution Phase:
 In the second Phase JavaScript engine once again run through the whole program line by line and it execute the code now.
