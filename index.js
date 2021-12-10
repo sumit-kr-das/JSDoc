@@ -1,6 +1,10 @@
-fun();
-console.log(x);
-var x = 20;
-function fun(){
-    console.log("Sumit Kr Das");
-};
+function fun(val){
+    if(val === undefined){
+        return 'This value is Undefined!'
+    }
+    return 'Not Undefined';
+}
+
+var n;
+console.log(fun(n));
+

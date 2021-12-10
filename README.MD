@@ -32,7 +32,7 @@ In the case of variables allocates a special value(placeholder) `undefined`.
 
 ### Code Execution Phase:
 In the second Phase JavaScript engine once again run through the whole program line by line and it execute the code now.
-When it invoke a new function a brand new execution context is created and this execution context again has the same two components 
+When it invoke a new function a brand new execution context is created and this execution context again has the same two components. When JavaScript engine finish the execution of this function the execution context will be deleted. 
 1) Memory Creation 
 2) Code Execution
 
@@ -40,6 +40,10 @@ When it invoke a new function a brand new execution context is created and this 
 
 ## What is Call Stack?
 Call Stack maintains the order of execution of execution context.
+
+![Global Execution Context](./assects/globalexecutioncontext.png)
+
+Here `anonymous` represents the Global Execution & `fun` is a brand new function. Call stack maintains all the order of execution here.
 
 ## Hoisting in JavaScript.
 Hoisting is the default behaviour of moving all the declarations at the top of the scope, before code execution.
@@ -58,4 +62,45 @@ Output:
 ```
 Sumit Kr Das
 undefined
+```
+
+## Undefined vs Notdefined
+
+`Undefined` means which which was allocates memory but not being assigned any value. In the other words A variable that has not been assigned a value is of type undefined.
+
+For Example:
+
+```js
+function fun(val){
+    if(val === undefined){
+        return 'This value is Undefined!'
+    }
+    return 'Not Undefined';
+}
+
+var n;
+console.log(fun(n));
+```
+Output:
+```
+This value is Undefined!
+```
+
+`Notdefined` means which was not being allocates memory. In the other words it is one of the reference errors that JavaScript will throw when someone accesses the variable which is not inside the memory heap.
+
+For Example:
+```js
+function fun(val){
+    if(val === undefined){
+        return 'This value is Undefined!'
+    }
+    return 'Not Undefined';
+}
+
+// var n;
+console.log(fun(n));
+```
+Output:
+```
+ReferenceError: n is not defined
 ```
