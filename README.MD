@@ -19,7 +19,7 @@ JavaScript is a `synchronous single-threaded` language.
 ## Why JavaScript is loosely typed or weakly typed?
 JavaScript is a loosely typed language, meaning you don’t have to specify what type of information will be stored in a variable in advance. JavaScript automatically types a variable based on what kind of information you assign to it (e.g., that '' or " " to indicate string values). Many other languages, like Java, require you to declare a variable’s type, such as int, float, boolean, or String.
 
-## How to execute JavaScript code?
+## How JavaScript works?
 As soon as the whole program is run the global execution context is created.
 The execution context is created into two parts:
 - [Memory Creation Phase](###memory-creation-phase)
@@ -28,7 +28,7 @@ The execution context is created into two parts:
 ### Memory Creation Phase:
 In the first Phase the JavaScript engine comes through the whole program
 line by line(single-threaded) & it allocates memory to all the variables & functions.
-In the case of variables allocates a special value(placeholder) `undefined`.
+In the case of variable allocates a special value(placeholder) `undefined`.
 
 ### Code Execution Phase:
 In the second Phase JavaScript engine once again run through the whole program line by line and it execute the code now.
