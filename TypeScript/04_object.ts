@@ -1,12 +1,32 @@
 /*
-    default typed object
-    update property
-    add a new property
-    define a custom type for object
-    use any keyword in object
+    Object Type
 */
 
-let user = {
+const person = {
+    name: "Sumit",
+    age: 20
+};
+
+/*
+    => If we cannot cast any type TS cast it by default. Like this:
+    const person: {
+        name: string;
+        age: number;
+    }
+*/
+
+/********** define a custom type for object process1 ***********/
+
+const person2: {
+    name: String;
+    age: Number;
+} = {
+    name: "Sumit",
+    age: 20
+};
+
+
+const user = {
     name: "Justin Bieber",
     age: 22,
     address: "USA"
@@ -14,14 +34,13 @@ let user = {
 
 /*
     user.name = 200;
-
-    Type 'number' is not assignable to type 'string'.   
+    => Type 'number' is not assignable to type 'string'.   
 */
 
 user.name = "Sumit";
 
 /*
-    we cannot add new value !
+    In TS we cannot add new value !
     user.email = "sumitkumar@gmail.com";
 
     Property 'email' does not exist on type 
@@ -30,7 +49,7 @@ user.name = "Sumit";
 */
 
 
-/********** define a custom type for object ***********/
+/********** define a custom type for object process2 ***********/
 
 interface userTyped {
     name: String,
